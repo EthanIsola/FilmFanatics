@@ -25,7 +25,9 @@ function MovieList() {
 
     return (
         <div>
-            {displayData}
+            <ul className="cards">
+                {displayData}
+            </ul>
         </div>
     )
 }
