@@ -11,6 +11,7 @@ function App() {
   const [selectedMovie, selectMovie] = useState([])
   const [selected, setSelect] = useState("")
   const [movies, setMovies] = useState([])
+  const [user, setUser] = useState(null)
 
   useEffect(()=>{
     fetch("http://localhost:9292/movies")
@@ -35,7 +36,7 @@ function App() {
           <Search />  
         </Route>
         <Route path = "/login">
-          <Login />  
+          <Login user = {user} setUser = {setUser}/>  
         </Route>
         <Route exact path = "/">
           <MovieList setSelect = { setSelect } movies = {movies}/>
