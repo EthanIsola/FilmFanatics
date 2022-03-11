@@ -22,12 +22,8 @@ body {
 }
 
 #main-header{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  height: 10rem;
-  border-radius: 30%;
-  opacity: 80%;
+justify-content: center;
+text-align: center;
 }
 
 .centered {
@@ -106,7 +102,21 @@ img {
   padding: 1rem;
   width: 25%;
 }
-
+.navbar {
+  justify-self: center;
+  background-color: rgb(128, 120, 120);
+  margin: 6px;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  
+}
+.navlink {
+  padding-right: 30px;
+  color:#fff
+}
 .card {
   background-color: white;
   border-radius: 0.25rem;
