@@ -31,10 +31,6 @@ function Login({user, setUser}) {
         }
     }
 
-    useEffect(()=>{
-        
-      },[])
-
       function handleSubmit(e) {
         e.preventDefault();
         if (option === "sign up") {
