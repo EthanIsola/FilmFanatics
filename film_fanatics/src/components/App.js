@@ -6,6 +6,7 @@ import Search from "./Search";
 import NavBar from "./NavBar";
 import MovieList from "./MovieList";
 import MoviePage from "./MoviePage";
+import Profile from "./Profile";
 
 function App() {
   const [selectedMovie, selectMovie] = useState([])
@@ -37,6 +38,9 @@ function App() {
         </Route>
         <Route path = "/login">
           <Login user = {user} setUser = {setUser}/>  
+        </Route>
+        <Route path = "/profile">
+          <Profile user = {user}/>  
         </Route>
         <Route exact path = "/">
           <MovieList setSelect = { setSelect } movies = {movies}/>

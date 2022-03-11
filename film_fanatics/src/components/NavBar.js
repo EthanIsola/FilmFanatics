@@ -8,6 +8,7 @@ function NavBar() {
       <NavLink exact to="/">Movies  </NavLink>
       <NavLink to="/login">Login  </NavLink>
       <NavLink to="/search">Search  </NavLink>
+      <NavLink to="/profile">Profile  </NavLink>
     </nav>  
   </div>)
 }
