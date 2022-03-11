@@ -33,7 +33,7 @@ function App() {
           <MoviePage movie = {selectedMovie[0]}/>  
         </Route>
         <Route path = "/search">
-          <Search />  
+          <Search movies ={movies} setSelect={setSelect}/>  
         </Route>
         <Route path = "/login">
           <Login user = {user} setUser = {setUser}/>  

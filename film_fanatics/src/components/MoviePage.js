@@ -54,17 +54,35 @@ function MoviePage() {
     }
         const listReview = reviews.map((review)=>{
             return (
-                <div>
-                  <div> 
-                    <label>Name:</label>
-                    <p>{review.name} </p>
+                <div >
+                <div className="testimonials">
+                  <div className="testimonial-heading"> 
                   </div>
-                  <div> 
-                    <label>Review:</label>
-                    <p>{review.review}  </p>  
+                  <div className="testimonial-box-container" >
+                      <div className ="testimonial-box">
+                        <div className="box-top">
+                            <div class="profile">
+                                <div class="profile-img">
+                                    <img src="https://i.otto.de/i/otto/eaee3906-06f9-5f39-89e1-19837c7f1135?$responsive_ft2$"/>
+                                </div>
+                                <div className="name-user"> 
+                                    <span>{review.name}</span>
+                                </div>
+                            </div>
+                            <div class="reviews">
+                                <i className ="fas fa-star">"{review.review}"  </i> 
+                            </div>
+                        
+                        </div>
+                        <div >
+                        <button value={review.id} onClick={handleDeleteClick} >delete</button>
+                        </div>
+                      </div>
+                     
                   </div>
-            <button value={review.id} onClick={handleDeleteClick}>delete</button>
+            
             {/* <button value={review.id} onClick={handleEditClick}>edit</button> */}
+            </div>
             </div>
             )
         }) 
@@ -72,25 +90,25 @@ function MoviePage() {
        
     return (
         <div>
-            
             <div>
+            <div >
                 <form onSubmit={handleSubmit}>
                     <div>
                         <label>Name:</label>
                         <input type="text" name="name" value={name}
-                        onChange ={(e) => setName(e.target.value)}/>
+                        onChange ={(e) => setName(e.target.value)} className="searchTermName"/>
                     </div>
                     <div>
                         <label>Review:</label>
-                        <input type="text" placeholder="any comments" value={newReviews} onChange ={(e) => setNewReviews(e.target.value)}/>
+                        <input type="text" placeholder="any comments" value={newReviews} onChange ={(e) => setNewReviews(e.target.value)}className="searchTermReview"/>
                         <input type="submit" />
                     </div>
                 </form>
             </div>
-            <div>
+            <div className="testimonialsss">
                 {listReview}
             </div>
-
+            </div>
         </div>
     )
 
